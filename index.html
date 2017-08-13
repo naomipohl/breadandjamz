@@ -16,7 +16,7 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Old+Standard+TT:400,400i,700" rel="stylesheet">
 
-    <title> Bread &amp; Jamz | Bread</title>
+    <title> Bread &amp; Jamz | Homepage</title>
 
 <!-- Social media icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -24,8 +24,12 @@
   <!-- favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
 
-  <!-- Javascript -->
+  <!-- Bootstrap Javascript -->
   <script src='bootstrap-4.0.0-alpha.6-dist/js/bootstrap.js' type='text/javascript'></script>
+
+  <!-- Custom Theme JavaScript -->
+
+    <script src='javascript.js'></script>
 
    <!-- jQuery -->
     <script src="bootstrap-4.0.0-alpha.6-dist/js/jquery.js"></script>
@@ -45,9 +49,9 @@
             <li>
                 <a href="about.html" onclick=$("#menu-close").click();>About</a>
             </li>
-            <li><strong>
+            <li>
                 <a href="bread.html" onclick=$("#menu-close").click();>Bread</a>
-            </li></strong>
+            </li>
             <li>
                 <a href="jamz.html" onclick=$("#menu-close").click();>Jamz</a>
             </li>
@@ -60,25 +64,84 @@
         </ul>
     </nav>
 
-<h1 id='apple'> 
-	<img src="images/wheat1.png" class="image_rotate_left" height=90 width=90 alternate="wheat1"/>
-		Bread 
-	<img src="images/wheat2.png" class="image_rotate_right" height=90 width=90 alternate="wheat2"/>
-</h1>
-
-<p> Here can be a little paragraph about what types of bread you make and stuff.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+<div class="text-vertical-center">
+    <h1 id='apple'>Bread &amp; Jamz</h1>
+</div>
 
 <div class="container">
 <div class="row">
-	<img src="images/bobby_nick.JPG" class="image" class='img-responsive' alt="Bobby_nick"/>
-
-	<img src="images/cookbook.JPG" class="image" class='img-responsive' alt="cookbook"/>
-
-	<img src="images/bobby_bryan.JPG" class="image" class='img-responsive' alt="bobby_bryan"/>
+<div class="col-lg-12 text-center" class="about">
+    <p> Bread &amp; Jamz started when...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Check out one of the links below to learn more! </p>
 </div>
 </div>
+</div>
+
+<!-- Homepage Images -->
+<div class="container">
+<div class='row'>
+<div class='col-lg-12'>
+    <div class="holder-vertical"><a href="bread.html"/>
+    <img src="images/highst.jpg" class="image" class='img-responsive' class='center-block' alt="High Street"/>
+            <div class="overlay">
+                    <div class="text"> Bread </div>
+            </div>
+    </div></a>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="row">
+<div class='col-lg-12'>
+    <div class="holder-vertical"><a href="jamz.html"/>
+        <img src="images/cookie.jpg" class="image" class='img-responsive' class='center-block' alt="Cookie"/>
+            <div class="overlay">
+                <div class="text"> Jamz </div>
+            </div>
+    </div></a>
+</div>
+</div>
+</div>
+
+<div class="container" class="#blog">
+<div class="row">
+<div class='col-lg-12'>
+    <div class="holder-vertical"><a href="blog.html"/>
+    <img src="images/notebook.jpg" class="image" class='img-responsive' class='center-block' alt="Blog"/>
+        <div class="overlay">
+            <div class="text"> Blog </div>
+        </div>
+    </div></a>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="row">
+<div class='col-lg-12'>
+
+<h3 id='apple' class='text-center'> We must bake with the flour we have. ~ Danish saying </h3>
+
+</div>
+</div>
+</div>
+
+    <div class="horiz_list">
+        <a href="https://www.instagram.com/bobbylundquist/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://twitter.com/bobbylundquist" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+    </div>
+
+<div class="container">
+<div class="row">
+<div class='col-lg-12'>
+        <p class='text-center'> © 2017. All rights reserved.</p>
+</div>
+</div>
+</div>
+
+<!-- Top Page Scroller -->
+<a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
 
  <!-- Custom Theme JavaScript -->
     <script>
@@ -136,4 +199,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     </script>
 
 </body>
-</html>
+
+  </html>

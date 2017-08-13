@@ -1,20 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-	<title> Bread + Jamz </title>
-  <link rel="stylesheet" type="text/css" href="css2.css">
-   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap -->
+<link href='bootstrap-4.0.0-alpha.6-dist/css/bootstrap-grid.css' type='text/css' rel='stylesheet'/>
+<link href='bootstrap-4.0.0-alpha.6-dist/css/bootstrap-reboot.css' type='text/css' rel='stylesheet'/>
+<link href='bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css' type='text/css' rel='stylesheet'/>
+
+<!-- Custom CSS -->
+<link href='css2.css' type='text/css' rel='stylesheet'/>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Old+Standard+TT:400,400i,700" rel="stylesheet">
+
+    <title> Bread &amp; Jamz | Jamz</title>
+
+<!-- Social media icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
+
+  <!-- Javascript -->
+  <script src='bootstrap-4.0.0-alpha.6-dist/js/bootstrap.js' type='text/javascript'></script>
+
+   <!-- jQuery -->
+    <script src="bootstrap-4.0.0-alpha.6-dist/js/jquery.js"></script>
+
   </head>
 
 <body>
 
-<h1> 
+<!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-lg pull-right toggle"><i class="fa fa-bars"></i></a>
+            <li class="sidebar-brand" id='apple'>
+                Bread &amp; Jamz
+            </li>
+            <li>
+                <a href="about.html" onclick=$("#menu-close").click();>About</a>
+            </li>
+            <li>
+                <a href="bread.html" onclick=$("#menu-close").click();>Bread</a>
+            </li>
+            <li><strong>
+                <a href="jamz.html" onclick=$("#menu-close").click();>Jamz</a>
+            </li></strong>
+            <li>
+                <a href="blog.html" onclick=$("#menu-close").click();>Blog</a>
+            </li>
+             <li>
+                <a href="contact.html" onclick=$("#menu-close").click();>Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+<h1 id='apple'> 
 	<img src="images/single_note.png" class="image_rotate_left" height=70 width=70 alternate="single_note"/>
 		Jamz 
 	<img src="images/double_note.png" class="image_rotate_right" height=70 width=70 alternate="double_note"/>
 </h1>
 
-<p> Bread + Jamz is only half about the bread. Here are some playlists- Enjoy! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+<p> Bread &amp; Jamz is only half about the bread. Here are some playlists- Enjoy! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
 
 <ul id="spotify_lists">
 
@@ -50,6 +102,61 @@
 </div></li>
 
 </ul>
+
+<!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+
+    //#to-top button appears after scrolling
+    var fixed = false;
+    $(document).scroll(function() {
+        if ($(this).scrollTop() > 250) {
+            if (!fixed) {
+                fixed = true;
+                // $('#to-top').css({position:'fixed', display:'block'});
+                $('#to-top').show("slow", function() {
+                    $('#to-top').css({
+                        position: 'fixed',
+                        display: 'block'
+                    });
+                });
+            }
+        } else {
+            if (fixed) {
+                fixed = false;
+                $('#to-top').hide("slow", function() {
+                    $('#to-top').css({
+                        display: 'none'
+                    });
+                });
+            }
+        }
+    });
+    </script>
 
 </body>
 </html>
